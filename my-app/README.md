@@ -1,13 +1,10 @@
-# COSC4353
-Class project for Software Design. Goal is to make a full-stack application that predicts the rate of the fuel based on criteria from customer. 
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory (this directory), you can run:
+In the project directory, you can run:
 
 ### `npm start`
 
