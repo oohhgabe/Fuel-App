@@ -1,0 +1,22 @@
+.middle{
+    text-align: center;
+}
+  
+.body{
+    margin:50px 0px;
+    font-size: 30px;
+    padding: 0px;
+    text-align: center;
+  }
+
+.FormQuote{
+    margin:50px 0px;
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.dateAlignment{
+    text-align: end;
+}
