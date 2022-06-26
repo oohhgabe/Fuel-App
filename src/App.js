@@ -8,6 +8,7 @@ import Register from "./pages/register";
 import Login from "./pages/login";
 import ProfileManagement from "./pages/ProfileManagement"
 import PricingModule from "./pages/PricingModule"
+import FuelQuoteHistory from "./pages/FuelQuoteHistory";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Route path = '/' exact element={<Home />}/>
             <Route path = '/home' element={<Home />}/>
             <Route path = '/FuelQuoteForm' element={<FuelQuoteForm />}/>
+            <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
             <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
             <Route path = '/PricingModule' element={<PricingModule />}/>
             <Route path = '/register' element={<Register />}/>

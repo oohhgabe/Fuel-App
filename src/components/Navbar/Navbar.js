@@ -22,6 +22,9 @@ const Navbar = () => {
                     <NavLink to = '/FuelQuoteForm' activeStyle>
                         Fuel Quote Form
                     </NavLink>
+                    <NavLink to = '/FuelQuoteHistory' activeStyle>
+                        Fuel Quote History
+                    </NavLink>
                     <NavLink to = '/register' activeStyle>
                         Create an account
                     </NavLink>

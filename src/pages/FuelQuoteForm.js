@@ -1,43 +1,41 @@
 import React, {useState} from "react";
-import './FuelQuote.css';
+import styles from './FuelQuote.module.css';
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 
 function FuelQuoteForm(){
     const [selectedDate,setSelectedDated] = useState(null);
     return(
-        <div classname="FuelQuoteForm">
-            <h1>Fuel Quote Form</h1>
-            <div class="body">
-                <p>Form Supposed To Go Here</p>
-                <form>
-                    <label>
-                        <div class="FormQuote">                            
-                            Gallons Requested:
-                            <input type="text" name="Gal_Req"/><br></br>
+        <div className="FuelQuoteForm">
+            <div className={styles.FuelQuoteForm_container}>
+                <form>                    
+                <div className={styles.FuelQuoteForm_p}>
+                        Gallons Requested:
+                        <input type="text" className={styles.FuelQuoteForm_inputText} name="Gal_Req"/>
+                    
+                        Deliver Address:
+                        <input type="text" className={styles.FuelQuoteForm_inputText} name="Del_Add" readOnly={true} value="Get From Profile"/>
+
+                        Delivery Date:
+                        <div className={styles.DateTextBox}>
+                        <DatePicker
+                            popperPlacement="bottom"
+                            selected={selectedDate}
+                            onChange={date => setSelectedDated(date)}
+                            dateFormat="dd/MM/yyyy"
+                            minDate={new Date()}
+                        />
                         </div>
-                        <div class="FormQuote">
-                            Deliver Address:
-                            <input type="text" name="Del_Add" readOnly={true} value="get from profile"/><br></br>
-                        </div>
-                        <div class="FormQuote">
-                            Delivery Date:
-                            <div class="dateAlignment">
-                            <DatePicker
-                                popperPlacement="bottom"
-                                selected={selectedDate}
-                                onChange={date => setSelectedDated(date)}
-                                dateFormat="dd/MM/yyyy"
-                                minDate={new Date()}
-                                />
-                            </div>
-                        </div>
-                        <div class="FormQuote">
-                            Suggested Price/gallon:
-                            <input type="text" name="Sug_pri" readOnly={true} value="get from # of gallons"/><br></br>
-                        </div>
-                    </label>                    
-                    <input type="submit" value="Submit"/><br></br>
+
+                        Suggested Price/Gallon:
+                        <input type="text" className={styles.FuelQuoteForm_inputText} name="Sug_Pri" readOnly={true} value="Get From # Of Gallons"/>
+
+                        Total Amount Due:
+                        <input type="text" className={styles.FuelQuoteForm_inputText} name="Tot_Amo" readOnly={true} value="Total Amount = Gallons * Price"/>
+                        
+
+                        <input type="submit" className={styles.FuelQuoteForm_inputSubmit} value="Submit"/>                       
+                </div>
                 </form>
             </div>
         </div>
