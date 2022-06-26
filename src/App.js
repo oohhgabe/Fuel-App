@@ -7,6 +7,7 @@ import FuelQuoteForm from "./pages/FuelQuoteForm";
 import Register from "./pages/register";
 import Login from "./pages/login";
 import ProfileManagement from "./pages/ProfileManagement"
+import PricingModule from "./pages/PricingModule"
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Route path = '/home' element={<Home />}/>
             <Route path = '/FuelQuoteForm' element={<FuelQuoteForm />}/>
             <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
+            <Route path = '/PricingModule' element={<PricingModule />}/>
             <Route path = '/register' element={<Register />}/>
             <Route path = '/login' element={<Login />}/>
         </Routes>

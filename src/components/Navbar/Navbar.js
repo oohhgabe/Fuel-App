@@ -16,6 +16,9 @@ const Navbar = () => {
                     <NavLink to ='/ProfileManagement' activeStyle>
                         Profile Management
                     </NavLink>
+                    <NavLink to = '/PricingModule' activeStyle>
+                        Pricing Module
+                    </NavLink>
                     <NavLink to = '/FuelQuoteForm' activeStyle>
                         Fuel Quote Form
                     </NavLink>
