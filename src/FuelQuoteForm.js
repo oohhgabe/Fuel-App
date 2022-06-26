@@ -7,34 +7,22 @@ function FuelQuoteForm(){
     const [selectedDate,setSelectedDated] = useState(null);
     return(
         <div classname="FuelQuoteForm">
-            <header>
-                <nav>
-                    <ul>   
-                        <h1>
-                        <p class="title">Fuel Quote Form</p>
-                        <li class="nav-item"><a href="/" class="active">Home</a></li>
-                        <li class="nav-item"><a href="/FuelQuoteHistory" class="active">Fuel Quote History</a></li>
-                        <li class="nav-item"><a href="/" class="active">Login</a></li>
-                        <li class="nav-item"><a href="/" class="active">Registration</a></li>
-                        <li class="nav-item"><a href="/" class="active">Profile</a></li>                                                 
-                        </h1>                         
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                <form>                   
-                            <p>                            
+            <h1>Fuel Quote Form</h1>
+            <div class="body">
+                <p>Form Supposed To Go Here</p>
+                <form>
+                    <label>
+                        <div class="FormQuote">                            
                             Gallons Requested:
-                            <input type="text" name="Gal_Req"/>
-                            </p>
-                    
-                            <p>
+                            <input type="text" name="Gal_Req"/><br></br>
+                        </div>
+                        <div class="FormQuote">
                             Deliver Address:
-                            <input type="text" name="Del_Add" readOnly={true} value="get from profile"/>
-                            </p>
-                      
-                            <p>
+                            <input type="text" name="Del_Add" readOnly={true} value="get from profile"/><br></br>
+                        </div>
+                        <div class="FormQuote">
                             Delivery Date:
+                            <div class="dateAlignment">
                             <DatePicker
                                 popperPlacement="bottom"
                                 selected={selectedDate}
@@ -42,14 +30,14 @@ function FuelQuoteForm(){
                                 dateFormat="dd/MM/yyyy"
                                 minDate={new Date()}
                                 />
-                            </p>
-                       
-                            <p>
+                            </div>
+                        </div>
+                        <div class="FormQuote">
                             Suggested Price/gallon:
-                            <input type="text" name="Sug_pri" readOnly={true} value="get from # of gallons"/>
-                            </p>
-                                           
-                    <input type="submit" value="Submit"/>
+                            <input type="text" name="Sug_pri" readOnly={true} value="get from # of gallons"/><br></br>
+                        </div>
+                    </label>                    
+                    <input type="submit" value="Submit"/><br></br>
                 </form>
             </div>
         </div>
