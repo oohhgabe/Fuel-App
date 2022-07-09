@@ -22,6 +22,9 @@ export const NavLink = styled(Link)`
     &.active {
       color: #808080;
     }
+    &:hover {
+      color: #808080;
+    }
 `;
 export const Title = styled.h1`
     color: white;
@@ -77,6 +80,23 @@ export const NavButtonLink = styled(Link) `
     &:hover {
       transition: all 0.2s ease-in-out;
       background: #808080;
+      color: white;
+    }
+`;
+export const NavButtonLink2 = styled(Link) `
+    border-radius: 4px;
+    background: orange;
+    padding: 10px 22px;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    margin-left: 24px;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background: darkorange;
       color: white;
     }
 `;

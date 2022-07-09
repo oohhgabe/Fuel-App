@@ -5,14 +5,18 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/home"
 import FuelQuoteForm from "./pages/FuelQuoteForm";
 import Register from "./pages/register";
-import Login from "./pages/login";
+import LoginForm from "./pages/login";
 import ProfileManagement from "./pages/ProfileManagement"
 import PricingModule from "./pages/PricingModule"
 import FuelQuoteHistory from "./pages/FuelQuoteHistory";
+import Welcome from "./pages/Welcome";
 
 function App() {
     return (
         <Router>
+            <Routes>
+                <Route path = '/Welcome' element={<Welcome />}/>
+            </Routes>
         <Navbar />
         <Routes>
             <Route path = '/' exact element={<Home />}/>
@@ -22,7 +26,7 @@ function App() {
             <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
             <Route path = '/PricingModule' element={<PricingModule />}/>
             <Route path = '/register' element={<Register />}/>
-            <Route path = '/login' element={<Login />}/>
+            <Route path = '/login' element={<LoginForm />}/>
         </Routes>
         </Router>
     )

@@ -1,48 +1,36 @@
-import React from "react";
-import '../components/Account/Account.css'
-import styled from "styled-components";
+import React, { useState } from "react";
+import LoginForm from "./LoginForm";
+import { useNavigate } from "react-router-dom"
 
-const LoginButton = styled.button `
-  font-size: 21px;
-  padding: 5px 20px;
-  border: 0;
-  background-color: orange;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-  &:hover {
-    background-color: darkorange;
-  }
-  &:focus {
-    outline: none;
-  }
-`;
-
-export default class Login extends React.Component {
-    constructor(props) {
-        super(props);
+const LoginPage = () => {
+    let navigate = useNavigate();
+    const adminUser = {
+        username: "admin",
+        password: "admin123"
     }
-    render () {
-        return (
-            <div className="base-container" ref={this.props.containerRef}>
-                <div className="header">Login</div>
-                <div className="content">
-                    <div className="form">
-                        <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" name="username" placeholder="username"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" placeholder="password"/>
-                        </div>
-                    </div>
-                </div>
-                <div className="footer">
-                    <LoginButton>Login</LoginButton>
-                </div>
-            </div>
 
-        );
+    const [user, setUser] = useState({username: ""});
+    const [error, setError] = useState("");
+
+    const Login = details => {
+        if (details.username == adminUser.username && details.password == adminUser.password)
+            setUser({username: details.username});
+        else if (details.username != adminUser.username)
+            setError("Incorrect username. Please try again.");
+        else if (details.password != adminUser.password)
+            setError("Incorrect password. Please try again.")
     }
+    const Logout = () => {
+        setUser({username: ""});
+    }
+    return (
+        <div className="Login">
+            {(user.username != "") ? (
+                navigate('/Welcome')
+            ) : ""};
+            <LoginForm Login={Login} error={error}/>
+        </div>
+    )
 }
+
+export default LoginPage;
