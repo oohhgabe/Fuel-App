@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/home"
 import FuelQuoteForm from "./pages/FuelQuoteForm";
-import Register from "./pages/register";
+import RegisterForm from "./pages/register";
 import LoginForm from "./pages/login";
 import ProfileManagement from "./pages/ProfileManagement"
 import PricingModule from "./pages/PricingModule"
@@ -25,7 +25,7 @@ function App() {
             <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
             <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
             <Route path = '/PricingModule' element={<PricingModule />}/>
-            <Route path = '/register' element={<Register />}/>
+            <Route path = '/register' element={<RegisterForm />}/>
             <Route path = '/login' element={<LoginForm />}/>
         </Routes>
         </Router>
