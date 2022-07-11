@@ -3,13 +3,6 @@ import './ProfileManagement.css';
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
 
-const Error = styled.h2 `
-  color: red;
-  font-size: 12px;
-  align-items: center;
-  margin-top: -25px;
-  margin-bottom: 10px;
-`;
 
 
 function ProfileManagement({props}) {
@@ -24,19 +17,6 @@ function ProfileManagement({props}) {
         State: "",
     })
 
-    const [error, setError] = useState("");
-
-    const [backendDetails, setBackendDetails] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/pm_info')
-            .then(res => {
-                return res.json();
-            })
-            .then( data => {
-                setBackendDetails(data.details)
-            })
-    },[]);
 
     const handleChange = (event) => {
         setDetails({...details, [event.target.name]: event.target.value});
@@ -70,21 +50,6 @@ function ProfileManagement({props}) {
         navigate('/ProfileUpdatedSuccessfully')
     }
 
-    /*
-    const handleSubmit = async (event) => {
-        setDetails(props);
-        event.preventDefault();
-        setDetails({
-            FullName: details.FullName,
-            Address1: details.Address1,
-            Address2: details.Address2,
-            City: details.City,
-            ZipCode: details.ZipCode,
-            State: details.State,
-        }); 
-    }
-    */
-
     return(
         <div classname="EditProfile">
             <h1>Edit profile</h1>
@@ -93,23 +58,57 @@ function ProfileManagement({props}) {
                     <label>
                         <div class="input">                            
                             Full Name:
-                            <input type="text" name="FullName" maxLength = "50" required/><br></br>
+                            <input type="text"
+                                   name="FullName"
+                                   value={setDetails.FullName}
+                                   placeholder={details.FullName}
+                                   maxLength = "50"
+                                   required
+                                   onChange={handleChange}
+                            /><br></br>
                         </div>
                         <div class="input">
                             Address 1:
-                            <input type="text" name="Address1" maxLength = "100" required/><br></br>
+                            <input type="text"
+                                   name="Address1"
+                                   value={setDetails.Address1}
+                                   placeholder={details.Address1}
+                                   maxLength = "100"
+                                   required
+                                   onChange={handleChange}
+                            /><br></br>
                         </div>
 						<div class="input">
                             Address 2:
-                            <input type="text" name="Address2" maxLength = "100"/><br></br>
+                            <input type="text"
+                                   name="Address2"
+                                   value={setDetails.Address2}
+                                   placeholder={details.Address2}
+                                   maxLength = "100"
+                                   onChange={handleChange}
+                            /><br></br>
                         </div>
 						<div class="input">
                             City:
-                            <input type="text" name="City" maxLength = "100" required/><br></br>
+                            <input type="text"
+                                   name="City"
+                                   value={setDetails.City}
+                                   placeholder={details.City}
+                                   maxLength = "100"
+                                   required
+                                   onChange={handleChange}
+                            /><br></br>
                         </div>
                         <div class="input">
                             Five digit zip code:
-                            <input type="text" name="ZipCode" pattern="[0-9]{5,}" required/><br></br>
+                            <input type="text"
+                                   name="ZipCode"
+                                   value={setDetails.ZipCode}
+                                   placeholder={details.ZipCode}
+                                   pattern="[0-9]{5,}"
+                                   required
+                                   onChange={handleChange}
+                            /><br></br>
                         </div>
 						<div class="input">
                         Select State
