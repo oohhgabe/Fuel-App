@@ -1,12 +1,95 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import './ProfileManagement.css';
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom"
 
-function ProfileManagement(){
+const Error = styled.h2 `
+  color: red;
+  font-size: 12px;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 10px;
+`;
+
+
+function ProfileManagement({props}) {
+    let navigate = useNavigate();
+
+    const [details, setDetails] = useState({
+        FullName: "",
+        Address1: "",
+        Address2: "",
+        City: "",
+        ZipCode: "",
+        State: "",
+    })
+
+    const [error, setError] = useState("");
+
+    const [backendDetails, setBackendDetails] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/pm_info')
+            .then(res => {
+                return res.json();
+            })
+            .then( data => {
+                setBackendDetails(data.details)
+            })
+    },[]);
+
+    const handleChange = (event) => {
+        setDetails({...details, [event.target.name]: event.target.value});
+    }
+    
+    const handleSubmit = async (event) => {
+        setDetails(props)
+        console.log(details)
+        event.preventDefault()
+        setDetails({
+            FullName: details.FullName,
+            Address1: details.Address1,
+            Address2: details.Address2,
+            City: details.City,
+            ZipCode: details.ZipCode,
+            State: details.State,
+        });
+
+       const value = {details};
+    
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(value)
+        };
+        const response = await fetch("http://localhost:5000/ProfileManagement",options);
+        const b = await response.json();
+        console.log(b);
+        navigate('/ProfileUpdatedSuccessfully')
+    }
+
+    /*
+    const handleSubmit = async (event) => {
+        setDetails(props);
+        event.preventDefault();
+        setDetails({
+            FullName: details.FullName,
+            Address1: details.Address1,
+            Address2: details.Address2,
+            City: details.City,
+            ZipCode: details.ZipCode,
+            State: details.State,
+        }); 
+    }
+    */
+
     return(
         <div classname="EditProfile">
             <h1>Edit profile</h1>
             <div class="body">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>
                         <div class="input">                            
                             Full Name:
@@ -30,11 +113,9 @@ function ProfileManagement(){
                         </div>
 						<div class="input">
                         Select State
-                            <form>
-                                <select class="box" required>
-                                    <option value = "DBcodes">DB will store these 2 character codes</option>
-                                </select>
-                            </form>
+                            <select class="box" name="State" required>
+                                <option value = "DBcodes">DB will store these 2 character codes</option>
+                            </select>
                         </div>
                         <div>
                             <br></br>

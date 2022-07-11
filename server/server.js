@@ -61,3 +61,26 @@ app.post('/register', (req, res) => {
 app.get('/details', (req, res) => {
     res.json({details});
 });
+
+let pm_info = [];
+app.post('/ProfileManagement', (req, res) => {
+    console.log("Received New Profile Update");
+    var newInfo = {
+        FullName: req.body.details.FullName,
+        Address1: req.body.details.Address1,
+        Address2: req.body.details.Address2,
+        City: req.body.details.City,
+        ZipCode: req.body.details.ZipCode,
+        State: req.body.details.State
+    }
+    pm_info.push(newInfo);
+    console.log(pm_info);
+    res.json({
+        status: "success",
+        Details: req.body
+    });
+});
+
+app.get('/pm_info', (req, res) => {
+    res.json({pm_info});
+});

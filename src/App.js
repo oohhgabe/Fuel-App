@@ -11,6 +11,7 @@ import PricingModule from "./pages/PricingModule"
 import FuelQuoteHistory from "./pages/FuelQuoteHistory";
 import Welcome from "./pages/Welcome";
 import AccountCreated from "./pages/SuccessfulAccount";
+import ProfileUpdatedSuccessfully from "./pages/ProfileUpdatedSuccessfully";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Routes>
                 <Route path = '/Welcome' element={<Welcome />}/>
                 <Route path = '/AccountCreated' element={<AccountCreated />}/>
+                <Route path = '/ProfileUpdatedSuccessfully' element={<ProfileUpdatedSuccessfully />}/>
             </Routes>
         <Navbar />
         <Routes>
