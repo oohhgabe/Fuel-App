@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
 
 const Error = styled.h2 `
-    color: red;
-    font-size: 12px;
-    align-items: center;
-    margin-top: -25px;
-    margin-bottom: 10px;
+  color: red;
+  font-size: 12px;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 10px;
 `;
 
 function LoginForm({props}) {

@@ -3,12 +3,22 @@ import '../components/Account/Account.css'
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
 
+const Error = styled.h2 `
+  color: red;
+  font-size: 12px;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 10px;
+`;
+
 function RegisterForm({props}){
     let navigate = useNavigate();
     const [details, setDetails] = useState({
         username: "",
         password: ""
     })
+
+    const [error, setError] = useState("");
 
     const handleChange = (event) => {
         setDetails({...details, [event.target.name]: event.target.value});
@@ -22,21 +32,23 @@ function RegisterForm({props}){
             username: details.username,
             password: details.password
         });
+        if (details.username != "" && details.password != ""){
+            const value = {details};
 
-        const value = {details};
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(value)
+            };
 
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(value)
-        };
-
-        const response = await fetch('http://localhost:5000/register', options);
-        const b = await response.json();
-        console.log(b);
-        navigate('/AccountCreated');
+            const response = await fetch('http://localhost:5000/register', options);
+            const b = await response.json();
+            console.log(b);
+            navigate('/AccountCreated');
+        } else
+            setError("Error some fields are empty!")
     }
 
     return (
@@ -65,6 +77,7 @@ function RegisterForm({props}){
                             onChange={handleChange}
                         />
                     </div>
+                    {(error != "") ? (<Error>{error}</Error> ) : ""}
                 </div>
                 <input type="submit" className="special" value="REGISTER"/>
                 </form>
