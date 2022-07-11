@@ -40,3 +40,22 @@ app.post('/create', (req,res)=>{
         Data: req.body
     });
 });
+
+let details = [];
+app.post('/register', (req, res) => {
+    console.log("Received New User Details");
+    var newDetails = {
+        username: req.body.details.username,
+        password: req.body.details.password
+    }
+    details.push(newDetails);
+    console.log(details);
+    res.json({
+        status: "success",
+        Details: req.body
+    });
+});
+
+app.get('/details', (req, res) => {
+    res.json({details});
+});
