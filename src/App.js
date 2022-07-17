@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import NavLayout from "./components/Navbar/NavLayout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home"
 import FuelQuoteForm from "./pages/FuelQuoteForm";
 import RegisterForm from "./pages/register";
@@ -16,21 +16,20 @@ import ProfileUpdatedSuccessfully from "./pages/ProfileUpdatedSuccessfully";
 function App() {
     return (
         <Router>
-            <Routes>
-                <Route path = '/Welcome' element={<Welcome />}/>
-                <Route path = '/AccountCreated' element={<AccountCreated />}/>
-                <Route path = '/ProfileUpdatedSuccessfully' element={<ProfileUpdatedSuccessfully />}/>
-            </Routes>
-        <Navbar />
         <Routes>
-            <Route path = '/' exact element={<Home />}/>
-            <Route path = '/home' element={<Home />}/>
-            <Route path = '/FuelQuoteForm' element={<FuelQuoteForm />}/>
-            <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
-            <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
-            <Route path = '/PricingModule' element={<PricingModule />}/>
-            <Route path = '/register' element={<RegisterForm />}/>
-            <Route path = '/LoginForm' element={<LoginForm />}/>
+            <Route path = '/Welcome' element={<Welcome />}/>
+            <Route path = '/AccountCreated' element={<AccountCreated />}/>
+            <Route path = '/ProfileUpdatedSuccessfully' element={<ProfileUpdatedSuccessfully />}/>
+            <Route element = {<NavLayout />}>
+                <Route path = '/' exact element={<Home />}/>
+                <Route path = '/home' element={<Home />}/>
+                <Route path = '/FuelQuoteForm' element={<FuelQuoteForm />}/>
+                <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
+                <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
+                <Route path = '/PricingModule' element={<PricingModule />}/>
+                <Route path = '/register' element={<RegisterForm />}/>
+                <Route path = '/LoginForm' element={<LoginForm />}/>
+            </Route>
         </Routes>
         </Router>
     )
