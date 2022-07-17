@@ -6,7 +6,7 @@ const Welcome = () => {
     return (
         <div className="WelcomePage">
             <div className="welcome">
-                <h2>Successfully Logged in!</h2>
+                <h2>Successfully logged in!</h2>
                 <NavButtonLink2 to ='/home'>Continue</NavButtonLink2>
             </div>
         </div>
