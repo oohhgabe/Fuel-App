@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const config = require('./db/configDB');
 app.use(express.static('public'))
 ////////// Below (lines 5,6,7 does similar things as lines 9,10 keeping just in case) ////////
 //const bodyParser = require('body-parser');
@@ -9,6 +10,8 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.listen(5000, () => console.log("server created in 5000"))
+
+const db = config.db;
 
 let info = [];
 
