@@ -18,7 +18,6 @@ class priceModule {
 		this.suggestedPrice = this.margin + 1.5
 		this.totalDue = this.suggestedPrice * this.GallonsRequested
 	}
-	
 }
 
 function PricingModule(){
