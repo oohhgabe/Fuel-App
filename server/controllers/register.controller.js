@@ -1,4 +1,4 @@
-import usertable from "../db/usertable.js";
+import usertable from "../usertable.js";
 import bcrypt from 'bcrypt';
 const users = new usertable();
 
