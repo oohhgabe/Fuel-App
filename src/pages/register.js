@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../components/Account/Account.css'
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
@@ -25,7 +25,6 @@ function RegisterForm({props}){
     }
 
     const handleSubmit = async (event) => {
-        setDetails(props);
         console.log(details);
         event.preventDefault();
         setDetails({
@@ -44,9 +43,11 @@ function RegisterForm({props}){
             };
 
             const response = await fetch('http://localhost:5000/register', options);
-            const b = await response.json();
-            console.log(b);
-            navigate('/AccountCreated');
+            const result = await response.json();
+            if (result.message)
+                setError(result.message)
+            else
+                navigate('/AccountCreated');
         } else
             setError("Error some fields are empty!")
     }

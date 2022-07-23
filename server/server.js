@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
+import registerRoute from "./routes/register.route.js";
 const app = express();
-const config = require('./db/configDB');
 app.use(express.static('public'))
 ////////// Below (lines 5,6,7 does similar things as lines 9,10 keeping just in case) ////////
 //const bodyParser = require('body-parser');
@@ -10,8 +10,6 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.listen(5000, () => console.log("server created in 5000"))
-
-const db = config.db;
 
 let info = [];
 
@@ -44,26 +42,8 @@ app.post('/create', (req,res)=>{
     });
 });
 
-let details = [];
-app.post('/register', (req, res) => {
-    if (req.body.details.username != '' && req.body.details.password != '') {
-        console.log("Received New User Details");
-        var newDetails = {
-            username: req.body.details.username,
-            password: req.body.details.password
-        }
-        details.push(newDetails);
-        console.log(details);
-        res.json({
-            status: "success",
-            Details: req.body
-        });
-    }
-});
 
-app.get('/details', (req, res) => {
-    res.json({details});
-});
+app.use('/', registerRoute);
 
 let pm_info = [];
 app.post('/ProfileManagement', (req, res) => {
