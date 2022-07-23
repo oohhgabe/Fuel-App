@@ -1,5 +1,7 @@
 import express from 'express';
 import registerRoute from "./routes/register.route.js";
+import loginRoute from "./routes/login.route.js";
+
 const app = express();
 app.use(express.static('public'))
 ////////// Below (lines 5,6,7 does similar things as lines 9,10 keeping just in case) ////////
@@ -44,6 +46,7 @@ app.post('/create', (req,res)=>{
 
 
 app.use('/', registerRoute);
+app.use('/', loginRoute);
 
 let pm_info = [];
 app.post('/ProfileManagement', (req, res) => {

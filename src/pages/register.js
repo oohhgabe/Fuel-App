@@ -25,31 +25,28 @@ function RegisterForm({props}){
     }
 
     const handleSubmit = async (event) => {
-        console.log(details);
         event.preventDefault();
         setDetails({
             username: details.username,
             password: details.password
         });
-        if (details.username != "" && details.password != ""){
-            const value = {details};
 
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(value)
-            };
+        const value = {details};
 
-            const response = await fetch('http://localhost:5000/register', options);
-            const result = await response.json();
-            if (result.message)
-                setError(result.message)
-            else
-                navigate('/AccountCreated');
-        } else
-            setError("Error some fields are empty!")
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(value)
+        };
+
+        const response = await fetch('http://localhost:5000/register', options);
+        const result = await response.json();
+        if (result.message)
+            setError(result.message)
+        else
+            navigate('/AccountCreated');
     }
 
     return (
@@ -64,6 +61,7 @@ function RegisterForm({props}){
                             type="text"
                             name="username"
                             value={setDetails.username}
+                            required
                             placeholder={details.username}
                             onChange={handleChange}
                         />
@@ -74,6 +72,7 @@ function RegisterForm({props}){
                             type="password"
                             name="password"
                             value={setDetails.password}
+                            required
                             placeholder={details.password}
                             onChange={handleChange}
                         />

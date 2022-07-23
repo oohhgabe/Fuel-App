@@ -3,21 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db/fueldb.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/fueldb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db/usertable.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/usertable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/deps/common-sqlite.gypi" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/deps/common-sqlite.gypi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/deps/sqlite-autoconf-3390100.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/deps/sqlite3.gyp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/deps/sqlite3.gyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/lib/binding/napi-v6-win32-unknown-x64/node_sqlite3.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/src/statement.cc" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/src/statement.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/src/statement.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/src/statement.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/wide-align/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/wide-align/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/register.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/register.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/register.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/register.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +58,7 @@
       <updated>1656126818175</updated>
       <workItem from="1656126819350" duration="37381000" />
       <workItem from="1656219461614" duration="499000" />
-      <workItem from="1658523937222" duration="11733000" />
+      <workItem from="1658523937222" duration="16362000" />
     </task>
     <servers />
   </component>

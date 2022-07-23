@@ -21,45 +21,36 @@ function LoginForm({props}) {
 
     const [error, setError] = useState("");
 
-    const [backendDetails, setBackendDetails] = useState([])
-
-    useEffect(() => {
-        fetch('http://localhost:5000/details')
-            .then(res => {
-                return res.json();
-            })
-            .then( data => {
-                setBackendDetails(data.details)
-            })
-    },[]);
-
     const handleChange = (event) => {
         setDetails({...details, [event.target.name]: event.target.value});
     }
 
     const handleSubmit = async (event) => {
-        let usernameFound = false;
-        let passwordFound = false;
 
-        setDetails(props);
         event.preventDefault();
+
         setDetails({
             username: details.username,
             password: details.password
         });
-        for (var i=0; i < backendDetails.length; i++) {
-            if (backendDetails.at(i).username == details.username && backendDetails.at(i).password == details.password){
-                navigate('/Welcome');
-            } else if (backendDetails.at(i).username != details.username && backendDetails.at(i).password == details.password) {
-                passwordFound = true;
-            } else if (backendDetails.at(i).username == details.username && backendDetails.at(i).password != details.password)
-                usernameFound = true;
-        }
-        if(!usernameFound)
-            setError("Incorrect username. Please try again.")
-        else if(!passwordFound)
-            setError("Incorrect password. Please try again.")
 
+        const value = {details};
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(value)
+        };
+
+        const response = await fetch('http://localhost:5000/login', options);
+        const result = await response.json();
+
+        if (result.message)
+            setError(result.message);
+        else
+            navigate('/Welcome');
     }
 
     return (
@@ -74,6 +65,7 @@ function LoginForm({props}) {
                                 type="text"
                                 name="username"
                                 value={setDetails.username}
+                                required
                                 placeholder={details.username}
                                 onChange={handleChange}
                             />
@@ -84,6 +76,7 @@ function LoginForm({props}) {
                                 type="password"
                                 name="password"
                                 value={setDetails.password}
+                                required
                                 placeholder={details.password}
                                 onChange={handleChange}
                             />
