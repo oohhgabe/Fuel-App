@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/login.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/login.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/register.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/register.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db/testingdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/testingdb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/login.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/login.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfileManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfileManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Welcome.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,6 +65,7 @@
       <workItem from="1656126819350" duration="37381000" />
       <workItem from="1656219461614" duration="499000" />
       <workItem from="1658523937222" duration="22930000" />
+      <workItem from="1658678614470" duration="5276000" />
     </task>
     <servers />
   </component>
@@ -76,5 +82,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/COSC4353$should_return_Hello_World_response.dat" NAME="should return Hello World response Coverage Results" MODIFIED="1658631650745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

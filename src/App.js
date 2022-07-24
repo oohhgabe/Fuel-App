@@ -12,6 +12,7 @@ import FuelQuoteHistory from "./pages/FuelQuoteHistory";
 import Welcome from "./pages/Welcome";
 import AccountCreated from "./pages/SuccessfulAccount";
 import ProfileUpdatedSuccessfully from "./pages/ProfileUpdatedSuccessfully";
+import UnauthAccess from "./pages/UnauthAccess";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <Route path = '/Welcome' element={<Welcome />}/>
             <Route path = '/AccountCreated' element={<AccountCreated />}/>
             <Route path = '/ProfileUpdatedSuccessfully' element={<ProfileUpdatedSuccessfully />}/>
+            <Route path = '/UnauthAccess' element={<UnauthAccess />}/>
             <Route element = {<NavLayout />}>
                 <Route path = '/' exact element={<Home />}/>
                 <Route path = '/home' element={<Home />}/>

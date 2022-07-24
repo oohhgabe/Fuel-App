@@ -93,7 +93,7 @@ export const NavButtonLink2 = styled(Link) `
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    margin-left: 24px;
+    align-items: center;
     &:hover {
       transition: all 0.2s ease-in-out;
       background: darkorange;
