@@ -1,6 +1,7 @@
 import express from 'express';
 import registerRoute from "./routes/register.route.js";
 import loginRoute from "./routes/login.route.js";
+import FuelQuoteRoute from "./routes/FuelQuote.route.js";
 
 const app = express();
 app.use(express.static('public'))
@@ -23,26 +24,7 @@ app.all('/*', function (req, res, next) {
     next();
   });
 
-app.get('/api', (req,res) => {
-    res.json({info})
-})
-
-app.post('/create', (req,res)=>{
-    console.log("Recieved New Data");
-    var newInfo = {
-        Gal_Req: req.body.data.Gal_Req, //req.body is to access the whole body information and req.body.(from file where you saved your states) to access specific values
-        Del_Add: req.body.data.Del_Add,
-        Del_Dat: req.body.data.Del_Dat,
-        Sug_Pri: req.body.data.Sug_Pri,
-        Tot_Amo: req.body.data.Tot_Amo
-    }
-    info.push(newInfo);
-    console.log(info);
-    res.json({
-        status: "success",
-        Data: req.body
-    });
-});
+app.use('/',FuelQuoteRoute);
 
 
 app.use('/', registerRoute);
