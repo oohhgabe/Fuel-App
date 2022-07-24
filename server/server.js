@@ -2,6 +2,7 @@ import express from 'express';
 import registerRoute from "./routes/register.route.js";
 import loginRoute from "./routes/login.route.js";
 import FuelQuoteRoute from "./routes/FuelQuote.route.js";
+import pmRoute from "./routes/pm.route.js";
 
 const app = express();
 app.use(express.static('public'))
@@ -30,25 +31,4 @@ app.use('/',FuelQuoteRoute);
 app.use('/', registerRoute);
 app.use('/', loginRoute);
 
-let pm_info = [];
-app.post('/ProfileManagement', (req, res) => {
-    console.log("Received New Profile Update");
-    var newInfo = {
-        FullName: req.body.details.FullName,
-        Address1: req.body.details.Address1,
-        Address2: req.body.details.Address2,
-        City: req.body.details.City,
-        ZipCode: req.body.details.ZipCode,
-        State: req.body.details.State
-    }
-    pm_info.push(newInfo);
-    console.log(pm_info);
-    res.json({
-        status: "success",
-        Details: req.body
-    });
-});
-
-app.get('/pm_info', (req, res) => {
-    res.json({pm_info});
-});
+app.use('/', pmRoute);

@@ -16,6 +16,9 @@ const Navbar = () => {
                     <NavLink to ='/ProfileManagement' activeStyle>
                         Profile Management
                     </NavLink>
+                    <NavLink to ='/Profile' activeStyle>
+                        Profile
+                    </NavLink>
                     <NavLink to = '/PricingModule' activeStyle>
                         Pricing Module
                     </NavLink>

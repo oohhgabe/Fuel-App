@@ -3,8 +3,6 @@ import './ProfileManagement.css';
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
 
-
-
 function ProfileManagement({props}) {
     let navigate = useNavigate();
 
