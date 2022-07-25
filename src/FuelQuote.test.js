@@ -1,13 +1,14 @@
 import React from 'react';
 //import {Alert} from 'react-native'
 import FuelQuoteForm from './pages/FuelQuoteForm'
-import FuelQuoteHistory from './pages/FuelQuoteHistory'
+//import FuelQuoteHistory from './pages/FuelQuoteHistory'
+import FuelQuoteHistory from "./pages/FuelQuoteHistory"
 import {render, screen, fireEvent, waitFor, getByTestId} from '@testing-library/react';
 import user from '@testing-library/user-event';
 import {BrowserRouter as Router} from 'react-router-dom'
 import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
-//jest.mock('./pages/FuelQuoteForm.js')
+
 describe('testing',()=>{
     const onSubmit = jest.fn();
     beforeEach(() =>{
@@ -39,6 +40,19 @@ describe('testing',()=>{
         userEvent.click(screen.getByRole('button',{name: /submit/i}))
     })
     
+    })
+})
+
+describe("FuelQuoteHistory Works",()=>{
+    beforeEach(() => jest.clearAllMocks());
+    it("History works",async()=>{
+      render(<Router><FuelQuoteHistory/></Router>)
+      expect(screen.getByText(/delivery date/i)).toBeInTheDocument()
+      expect(screen.getByText(/delivery address/i)).toBeInTheDocument()
+      expect(screen.getByText(/gallons requested/i)).toBeInTheDocument()
+      expect(screen.getByText(/suggested price/i)).toBeInTheDocument()
+      expect(screen.getByText(/total amount/i)).toBeInTheDocument()
+      
     })
 })
 

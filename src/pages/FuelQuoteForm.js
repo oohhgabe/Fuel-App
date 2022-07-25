@@ -79,10 +79,15 @@ function FuelQuoteForm({props}){
             Tot_Amo: data.Gal_Req * data.Sug_Pri,
             Users_Id: backendDetails.id
         });
-        
-        const value = {data};
-        
-        const options = {
+        if(data.Del_Dat === null || data.Gal_Req === 0){
+            alert("Please Revise Your Input");
+            navigate('/FuelQuoteForm')
+        }else{
+
+            
+            const value = {data};
+            
+            const options = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -92,6 +97,8 @@ function FuelQuoteForm({props}){
         const response = await fetch("http://localhost:5000/create",options);
         const b = await response.json();
         //console.log(b);
+        }
+        
     }
     
 

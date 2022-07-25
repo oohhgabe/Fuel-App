@@ -30,9 +30,6 @@ function FuelQuoteHistory(){
             alert("Please Login");
             navigate('/LoginForm');
         }
-        else if(Loading && backendDetails !== undefined){
-           // console.log(backendDetails)
-        }
     },[backendDetails])
 
     const [backendData, setBackendData] = useState([])
