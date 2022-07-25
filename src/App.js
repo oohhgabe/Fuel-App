@@ -12,6 +12,8 @@ import FuelQuoteHistory from "./pages/FuelQuoteHistory";
 import Welcome from "./pages/Welcome";
 import AccountCreated from "./pages/SuccessfulAccount";
 import ProfileUpdatedSuccessfully from "./pages/ProfileUpdatedSuccessfully";
+import Profile from "./pages/profile.js"
+import UnauthAccess from "./pages/UnauthAccess";
 
 function App() {
     return (
@@ -20,12 +22,14 @@ function App() {
             <Route path = '/Welcome' element={<Welcome />}/>
             <Route path = '/AccountCreated' element={<AccountCreated />}/>
             <Route path = '/ProfileUpdatedSuccessfully' element={<ProfileUpdatedSuccessfully />}/>
+            <Route path = '/UnauthAccess' element={<UnauthAccess />}/>
             <Route element = {<NavLayout />}>
                 <Route path = '/' exact element={<Home />}/>
                 <Route path = '/home' element={<Home />}/>
                 <Route path = '/FuelQuoteForm' element={<FuelQuoteForm />}/>
                 <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
                 <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
+                <Route path = '/Profile' element={<Profile />}/>
                 <Route path = '/PricingModule' element={<PricingModule />}/>
                 <Route path = '/register' element={<RegisterForm />}/>
                 <Route path = '/LoginForm' element={<LoginForm />}/>

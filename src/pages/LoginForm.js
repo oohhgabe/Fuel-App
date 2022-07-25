@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../components/Account/Account.css'
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../AuthProvider";
 
 const Error = styled.h2 `
   color: red;
@@ -12,6 +13,7 @@ const Error = styled.h2 `
 `;
 
 function LoginForm({props}) {
+    const { setAuth } = useAuth();
     let navigate = useNavigate();
 
     const [details, setDetails] = useState({
@@ -49,8 +51,10 @@ function LoginForm({props}) {
 
         if (result.message)
             setError(result.message);
-        else
+        else {
+            setAuth(true);
             navigate('/Welcome');
+        }
     }
 
     return (

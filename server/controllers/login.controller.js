@@ -14,6 +14,7 @@ const loginInfo = (req, res) => {
                     bcrypt.compare(req.body.details.password, result.password)
                         .then((isPasswordValid) => {
                             if (isPasswordValid) {
+                                req.app.locals.client = result;
                                 res.send(result);
                                 currentlyLoggedIn[0] = result;
                             }

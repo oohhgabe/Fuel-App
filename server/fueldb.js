@@ -2,7 +2,6 @@ import sqlite3 from 'sqlite3';
 import Promise from 'bluebird';
 
 class fueldb {
-	// putting the db connection in the constructor seems nice because it auto runs but I would be a little worried because sqlite3 opens and closes the db connection when not in use. This should be re-opening it though.
 	constructor() {
 		// Creates a auth.db file for the database in current directory
     this.db = new sqlite3.Database("./fuel.db", (err) => {
