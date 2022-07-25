@@ -3,6 +3,7 @@ import registerRoute from "./routes/register.route.js";
 import loginRoute from "./routes/login.route.js";
 import FuelQuoteRoute from "./routes/FuelQuote.route.js";
 import pmRoute from "./routes/pm.route.js";
+//import stateRoute from "./routes/state.route.js";
 
 const app = express();
 app.use(express.static('public'))
@@ -32,3 +33,4 @@ app.use('/', registerRoute);
 app.use('/', loginRoute);
 
 app.use('/', pmRoute);
+//app.use('/', stateRoute);

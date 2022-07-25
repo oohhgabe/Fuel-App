@@ -1,7 +1,7 @@
-import React, { useEffect,useState } from "react";
+import React, { useMemo, useEffect ,useState } from "react";
 import './ProfileManagement.css';
-import styled from "styled-components";
 import { useNavigate } from "react-router-dom"
+import { DropDownList } from "@progress/kendo-react-dropdowns"; 
 
 function ProfileManagement({props}) {
     let navigate = useNavigate();
@@ -47,6 +47,28 @@ function ProfileManagement({props}) {
         console.log(b);
         navigate('/ProfileUpdatedSuccessfully')
     }
+
+    const [states, setStates] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/states',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify()
+        })
+        .then(res => {
+            let result = res.json()
+            return result;
+        })
+        .then( data => {
+            //console.log(data)
+            //alert(data.result)
+            setStates(data.result.state)
+            //alert(data.result.state)
+        })
+    },[states]);
 
     return(
         <div classname="EditProfile">
@@ -110,8 +132,17 @@ function ProfileManagement({props}) {
                         </div>
 						<div class="input">
                         Select State
-                            <select class="box" name="State" required>
-                                <option value = "DBcodes">DB will store these 2 character codes</option>
+                            <select class="box" name="State" value={setDetails.State} onChange={handleChange} required>
+                            <option value = "TX">TX</option>
+                            <option value = "AL">AL</option>
+                            <option value = "TN">TN</option>
+                            <option value = "AK">AK</option>
+                            <option value = "NY">NY</option>
+                            <option value = "CA">CA</option>
+                            <option value = "NV">NV</option>
+                            <option value = "WM">WM</option>
+                            <option value = "OH">OH</option>
+                            <option value = "OK">OK</option>
                             </select>
                         </div>
                         <div>

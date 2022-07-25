@@ -12,7 +12,7 @@ const createPMInfo = (req,res) => {
 	
 	console.log("Received New Profile Update for " + arr);
     profile.createUser(
-        req.body.details.username,
+        arr,
         req.body.details.FullName,
         req.body.details.Address1,
         req.body.details.Address2,
@@ -22,8 +22,10 @@ const createPMInfo = (req,res) => {
     );
 }
 
-const getPMInfo = (req,res) =>{
+const getPMInfo = (req,res) => {
 	var arr = req.app.locals.client.username;
+	console.log("inside getPMinfo: " + arr)
+	console.log("inside getPMinfo, from fetch: " + req.body.backendDetails.id)
 	profile.getByUsername(arr)
 	.then((result) =>{
 			res.json({result});

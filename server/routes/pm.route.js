@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/ProfileManagement', createPMInfo);
 
-router.get('/pm_info', getPMInfo);
+router.post('/pm_info', getPMInfo);
 
 export default router;

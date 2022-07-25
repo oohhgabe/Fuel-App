@@ -11,6 +11,16 @@ function Profile({props}) {
         password: ""
     })
 
+    const [details, setDetails] = useState({
+        username: "",
+        fullname: "",
+        address1: "",
+        address2: "",
+        city: "",
+        zipcode: "",
+        state: ""
+    })
+
     useEffect(() => {
         setLoading(false)
         fetch('http://localhost:5000/login_info')
@@ -35,7 +45,6 @@ function Profile({props}) {
 
     const [backendData, setBackendData] = useState([])
     const value = {backendDetails}
-    
     useEffect(() => {
         fetch('http://localhost:5000/pm_info',{
             method: 'POST',
@@ -45,30 +54,27 @@ function Profile({props}) {
             body: JSON.stringify(value)
         })
         .then(res => {
-            return res.json();
+            let result = res.json()
+            return result;
         })
         .then( data => {
             //console.log(data)
-            setBackendData(data.result)
+            //alert(data.result)
+            setDetails(data.result)
+            
         })
-    },[backendDetails]);
-
+    },[details]);
+    //alert(details.city)
     return(
         <div classname="EditProfile">
             <h1>Profile</h1>
             <div class="body">
-							{backendData}
-						{backendData.map((val,key) =>{
-                    return(
-                        val.JSON
-                    );
-                })} 
                 <form>
                     <label>
                         <div class="input">                            
                             Full Name:
                             <input type="text"
-                                   value={backendData}
+                                   value={details.fullname}
                                    placeholder=""
 																	 disable
                             /><br></br>
@@ -76,34 +82,34 @@ function Profile({props}) {
                         <div class="input">
                             Address 1:
                             <input type="text"
-                                   value="test"
+                                   value={details.address1}
 																	 disable
                             /><br></br>
                         </div>
 						<div class="input">
                             Address 2:
                             <input type="text"
-                                   value="test"
+                                   value={details.address2}
 																	 disable
                             /><br></br>
                         </div>
 						<div class="input">
                             City:
                             <input type="text"
-                                   value="test"
+                                   value={details.city}
 																	 disable
                             /><br></br>
                         </div>
                         <div class="input">
                             Five digit zip code:
                             <input type="text"
-                                   value="test"
+                                   value={details.zipcode}
 																	 disable
                             /><br></br>
                         </div>
 												<div class="input">
                         State
-                        <input type="text" value="soon" disable/><br></br>
+                        <input type="text" value={details.state} disable/><br></br>
                         </div>
                     </label>      
                      
