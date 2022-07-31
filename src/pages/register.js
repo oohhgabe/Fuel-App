@@ -62,7 +62,7 @@ function RegisterForm({props}){
                             name="username"
                             value={setDetails.username}
                             required
-                            placeholder={details.username}
+                            placeholder={"Username"}
                             onChange={handleChange}
                         />
                     </div>
@@ -73,7 +73,7 @@ function RegisterForm({props}){
                             name="password"
                             value={setDetails.password}
                             required
-                            placeholder={details.password}
+                            placeholder={"Password"}
                             onChange={handleChange}
                         />
                     </div>

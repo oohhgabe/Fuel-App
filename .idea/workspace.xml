@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/login.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/login.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/register.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/register.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfileManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfileManagement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Message.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Welcome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +33,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/gabe/Coding/fuelapp/COSC4353",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/gabe/Coding/fuelapp/COSC4353/node_modules/react-scripts",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
@@ -53,6 +48,68 @@
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/Components/account" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.Login Testing">
+    <configuration name="Check if Navbar has links" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Navbar.test.js" />
+      <test-names>
+        <test-name value="Check if Navbar has links" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Login Testing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/LoginForm.test.js" />
+      <test-names>
+        <test-name value="Login Testing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Register Testing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/Register.test.js" />
+      <test-names>
+        <test-name value="Register Testing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="testing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/FuelQuote.test.js" />
+      <test-names>
+        <test-name value="testing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Login Testing" />
+        <item itemvalue="Jest.Check if Navbar has links" />
+        <item itemvalue="Jest.Register Testing" />
+        <item itemvalue="Jest.testing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,6 +123,7 @@
       <workItem from="1656219461614" duration="499000" />
       <workItem from="1658523937222" duration="22930000" />
       <workItem from="1658678614470" duration="5276000" />
+      <workItem from="1659156386950" duration="13054000" />
     </task>
     <servers />
   </component>
@@ -88,6 +146,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/COSC4353$Register_Testing.info" NAME="Register Testing Coverage Results" MODIFIED="1659222653185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$testing.info" NAME="testing Coverage Results" MODIFIED="1659219446217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$Login_Testing.info" NAME="Login Testing Coverage Results" MODIFIED="1659236119267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$Rerun_Failed_Tests.info" NAME="Rerun Failed Tests Coverage Results" MODIFIED="1659236216935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$Check_if_Navbar_has_links.info" NAME="Check if Navbar has links Coverage Results" MODIFIED="1659234781409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$should_return_Hello_World_response.dat" NAME="should return Hello World response Coverage Results" MODIFIED="1658631650745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

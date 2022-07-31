@@ -70,7 +70,7 @@ function LoginForm({props}) {
                                 name="username"
                                 value={setDetails.username}
                                 required
-                                placeholder={details.username}
+                                placeholder={"Username"}
                                 onChange={handleChange}
                             />
                         </div>
@@ -81,7 +81,7 @@ function LoginForm({props}) {
                                 name="password"
                                 value={setDetails.password}
                                 required
-                                placeholder={details.password}
+                                placeholder={"Password"}
                                 onChange={handleChange}
                             />
                         </div>

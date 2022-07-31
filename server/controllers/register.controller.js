@@ -15,6 +15,7 @@ const registerInfo = (req, res) => {
                             console.log("Hashed password: " + hashPassword);
                             users.createUser(req.body.details.username, hashPassword)
                                 .then((answer) => {
+                                    res.json(answer);
                                     res.send(answer);
                                 })
                         }));
