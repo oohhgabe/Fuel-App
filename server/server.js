@@ -3,6 +3,7 @@ import registerRoute from "./routes/register.route.js";
 import loginRoute from "./routes/login.route.js";
 import FuelQuoteRoute from "./routes/FuelQuote.route.js";
 import pmRoute from "./routes/pm.route.js";
+import PricingModuleRoute from "./routes/PricingModule.route.js";
 //import stateRoute from "./routes/state.route.js";
 
 const app = express();
@@ -15,8 +16,6 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.listen(5000, () => console.log("server created in 5000"))
-
-let info = [];
 
 app.all('/*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -33,4 +32,6 @@ app.use('/', registerRoute);
 app.use('/', loginRoute);
 
 app.use('/', pmRoute);
+
+app.use('/', PricingModuleRoute);
 //app.use('/', stateRoute);

@@ -30,6 +30,12 @@ class FuelQuoteTable extends fueldb {
             [Users_Id]
         );
     }
+    getUserHistory(Users_Id){
+        return this.run(
+            `SELECT COUNT(*) FROM FuelQuote WHERE Users_Id = ?`,
+            [Users_Id]
+        );
+    }
 }
 
 export default FuelQuoteTable

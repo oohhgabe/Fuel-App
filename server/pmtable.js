@@ -33,7 +33,7 @@ class pmtable extends fueldb {
 
 	// This runs... Just when user opens profile management page
 	getByUsername(username) {
-    return this.get(
+      return this.get(
       `SELECT * FROM pmtable WHERE username = ?`,
       [username])
   }

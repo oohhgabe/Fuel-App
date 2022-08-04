@@ -18,7 +18,7 @@ const createPMInfo = (req,res) => {
         req.body.details.Address2,
         req.body.details.City,
         req.body.details.State,
-				req.body.details.ZipCode
+		req.body.details.ZipCode
     );
 }
 

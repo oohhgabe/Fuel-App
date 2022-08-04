@@ -15,11 +15,22 @@ function ProfileManagement({props}) {
         State: "",
     })
 
+    const [selectedState, setSelectedState] = useState(null);
 
     const handleChange = (event) => {
         setDetails({...details, [event.target.name]: event.target.value});
     }
-    
+
+    const newHandle = () => {
+        setDetails({
+            FullName: details.FullName,
+            Address1: details.Address1,
+            Address2: details.Address2,
+            City: details.City,
+            ZipCode: details.ZipCode,
+            State: selectedState,
+        });
+    }
     const handleSubmit = async (event) => {
         setDetails(props)
         console.log(details)
@@ -30,7 +41,7 @@ function ProfileManagement({props}) {
             Address2: details.Address2,
             City: details.City,
             ZipCode: details.ZipCode,
-            State: details.State,
+            State: selectedState,
         });
 
        const value = {details};
@@ -74,7 +85,7 @@ function ProfileManagement({props}) {
         <div classname="EditProfile">
             <h1>Edit profile</h1>
             <div class="body">
-                <form onSubmit={handleSubmit}>
+                <form onClick={newHandle} onSubmit={handleSubmit}>
                     <label>
                         <div class="input">                            
                             Full Name:
@@ -132,7 +143,9 @@ function ProfileManagement({props}) {
                         </div>
 						<div class="input">
                         Select State
-                            <select class="box" name="State" value={setDetails.State} onChange={handleChange} required>
+                            <select class="box" name="State" value={selectedState}
+                            onChange={(state) => setSelectedState(state.target.value)} required>
+                            <option value = "none" selected disabled hidden>State</option>
                             <option value = "TX">TX</option>
                             <option value = "AL">AL</option>
                             <option value = "TN">TN</option>
