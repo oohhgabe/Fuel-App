@@ -27,18 +27,6 @@ function FuelQuoteForm({props}){
             setLoading(true)
         })
     },[]);
-    
-    useEffect(() =>{
-        if(Loading && backendDetails === undefined){
-            //console.log(backendDetails)
-            alert("Please Login");
-            navigate('/LoginForm');
-        }
-        /*else if(Loading && backendDetails !== undefined){
-            console.log(backendDetails)
-        }*/
-    },[backendDetails])
-    
 
     const [selectedDate,setSelectedDated] = useState(null);
         

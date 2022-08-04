@@ -25,13 +25,6 @@ function FuelQuoteHistory(){
         })
     },[]);
 
-    useEffect(() =>{
-        if(Loading && backendDetails === undefined){
-            alert("Please Login");
-            navigate('/LoginForm');
-        }
-    },[backendDetails])
-
     const [backendData, setBackendData] = useState([])
     const value = {backendDetails}
     
