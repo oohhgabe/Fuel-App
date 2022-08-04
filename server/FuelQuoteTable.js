@@ -17,6 +17,13 @@ class FuelQuoteTable extends fueldb {
         this.run(sql)
     }
 
+    getUsername(Users_Id){
+        return this.all(
+            `SELECT username FROM users WHERE id=?`,
+            [Users_Id]
+        );
+    }
+
     createQuote(Gal_Req,Del_Add,Del_Dat,Sug_Pri,Tot_Amo,Users_Id){
         return this.run(
             `INSERT INTO FuelQuote (Gallons_Requested, Delivery_Address, Deliver_Date, Suggested_Price, Total_Amount, Users_Id) VALUES (?,?,?,?,?,?)`,
@@ -31,7 +38,7 @@ class FuelQuoteTable extends fueldb {
         );
     }
     getUserHistory(Users_Id){
-        return this.run(
+        return this.get(
             `SELECT COUNT(*) FROM FuelQuote WHERE Users_Id = ?`,
             [Users_Id]
         );
