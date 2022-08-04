@@ -51,18 +51,27 @@ const Navbar = () => {
                             <NavLink to ='/UnauthAccess' activeStyle>
                                 Profile Management
                             </NavLink>)}
-                    <NavLink to ='/Profile' activeStyle>
-                        Profile
-                    </NavLink>
-                    <NavLink to = '/PricingModule' activeStyle>
-                        Pricing Module
-                    </NavLink>
-                    <NavLink to = '/FuelQuoteForm' activeStyle>
-                        Fuel Quote Form
-                    </NavLink>
-                    <NavLink to = '/FuelQuoteHistory' activeStyle>
-                        Fuel Quote History
-                    </NavLink>
+                    {auth ? (
+                        <NavLink to ='/Profile' activeStyle>
+                            Profile
+                        </NavLink>) : (
+                        <NavLink to ='/UnauthAccess' activeStyle>
+                            Profile
+                        </NavLink>)}
+                    {auth ? (
+                        <NavLink to = '/FuelQuoteForm' activeStyle>
+                            Fuel Quote Form
+                        </NavLink>) : (
+                        <NavLink to ='/UnauthAccess' activeStyle>
+                            Fuel Quote Form
+                        </NavLink>)}
+                    {auth ? (
+                        <NavLink to = '/FuelQuoteHistory' activeStyle>
+                            Fuel Quote History
+                        </NavLink>) : (
+                        <NavLink to ='/UnauthAccess' activeStyle>
+                            Fuel Quote History
+                        </NavLink>)}
                     {auth ? ("") : (
                         <NavLink to = '/register' activeStyle>
                             Create an account

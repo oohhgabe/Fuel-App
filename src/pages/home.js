@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Home = () => {
     const Title = styled.h1 `
-        font-size: 1.5em;
+        font-size: 3em;
         text-align: center;
         color: black;
         font-weight: bolder;

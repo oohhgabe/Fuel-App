@@ -7,7 +7,6 @@ import FuelQuoteForm from "./pages/FuelQuoteForm";
 import RegisterForm from "./pages/register";
 import LoginForm from "./pages/LoginForm";
 import ProfileManagement from "./pages/ProfileManagement"
-import PricingModule from "./pages/PricingModule"
 import FuelQuoteHistory from "./pages/FuelQuoteHistory";
 import Welcome from "./pages/Welcome";
 import AccountCreated from "./pages/SuccessfulAccount";
@@ -30,7 +29,6 @@ function App() {
                 <Route path = '/FuelQuoteHistory' element={<FuelQuoteHistory/>}/>
                 <Route path = '/ProfileManagement' element={<ProfileManagement />}/>
                 <Route path = '/Profile' element={<Profile />}/>
-                <Route path = '/PricingModule' element={<PricingModule />}/>
                 <Route path = '/register' element={<RegisterForm />}/>
                 <Route path = '/LoginForm' element={<LoginForm />}/>
             </Route>

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/FuelQuoteTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/FuelQuoteTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/pm.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/pm.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pmtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/pmtable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FuelQuote.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FuelQuote.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FuelQuoteForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FuelQuoteForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfileManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfileManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
