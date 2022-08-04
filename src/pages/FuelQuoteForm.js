@@ -77,6 +77,7 @@ function FuelQuoteForm({props}){
                 Sug_Pri: quote.price,
                 Tot_Amo: quote.total,
                 Users_Id: backendDetails.id,
+                username: backendDetails.username
             })
             setQuoteState(true);
         }
