@@ -19,8 +19,10 @@ const PricingModule = async (req, res) => {
         else
             galReqFactor = 0.03;
 
-            const getState = await profile.getState(req.body.data.username)
+            await profile.getState(req.body.data.username)
             .then((result) => {
+                console.log(req.app.locals.client.username);
+                console.log(req.body.data.username);
                 console.log("1:" + result)
                 if (result['state'] === undefined){
                     console.log(req.body)
@@ -38,7 +40,7 @@ const PricingModule = async (req, res) => {
                 return locationFactor;
             });
             
-        const getHistory = await fuelQuote.getUserHistory(req.body.data.Users_Id)
+        await fuelQuote.getUserHistory(req.body.data.Users_Id)
             .then((result) => {
                 console.log("3: " + result['COUNT(*)'])
                 if (result['COUNT(*)'] === undefined){
