@@ -24,10 +24,13 @@ const createPMInfo = (req,res) => {
 
 const getPMInfo = (req,res) => {
 	var arr = req.app.locals.client.username;
-	console.log("inside getPMinfo: " + arr)
-	console.log("inside getPMinfo, from fetch: " + req.body.backendDetails.id)
+
 	profile.getByUsername(arr)
 	.then((result) =>{
+			if (result == undefined) {
+				profile.createUser(arr, "", "", "", "", "", "");
+				result = profile.getByUsername(arr)
+			}
 			res.json({result});
 	})
 }
