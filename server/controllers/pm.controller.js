@@ -28,6 +28,7 @@ const getPMInfo = (req,res) => {
 	profile.getByUsername(arr)
 	.then((result) =>{
 			if (result == undefined) {
+				console.log("Someone tried to access profile without making a profile, setting default empty values now.")
 				profile.createUser(arr, "", "", "", "", "", "");
 				result = profile.getByUsername(arr)
 			}

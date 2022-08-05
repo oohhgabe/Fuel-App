@@ -11,7 +11,7 @@ class pmtable extends fueldb {
 	// This can run after user registration
 	createUser(username, fullname, address1, address2, city, state, zipcode) {
     return this.run(
-      'INSERT OR IGNORE INTO pmtable (username, fullname, address1, address2, city, state, zipcode) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      'INSERT OR REPLACE INTO pmtable (username, fullname, address1, address2, city, state, zipcode) VALUES (?, ?, ?, ?, ?, ?, ?)',
       [username, fullname, address1, address2, city, state, zipcode]
     )
   }
