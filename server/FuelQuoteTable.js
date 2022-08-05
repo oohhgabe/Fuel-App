@@ -43,6 +43,13 @@ class FuelQuoteTable extends fueldb {
             [Users_Id]
         );
     }
+
+    getAddress(username){
+        return this.get(
+            `SELECT address1 FROM pmtable WHERE username=?`,
+            [username]
+        )
+    }
 }
 
 export default FuelQuoteTable

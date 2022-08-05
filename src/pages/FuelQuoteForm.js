@@ -15,7 +15,10 @@ function FuelQuoteForm({props}){
         username: "",
         password: "",
     })
-    
+    const [address,setAddress] = useState({
+        add: ""
+    })
+
     useEffect(() => {
         setLoading(false)
         fetch('http://localhost:5000/login_info')
@@ -27,6 +30,23 @@ function FuelQuoteForm({props}){
             setLoading(true)
         })
     },[]);
+
+    const info = {backendDetails}
+    useEffect(() => {
+        fetch('http://localhost:5000/getAddress',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(info)
+        })
+        .then(res => {
+            return res.json();
+        })
+        .then( data => {
+            setAddress(data.result.address1)
+        })
+    })
 
     const [selectedDate,setSelectedDated] = useState(null);
         
@@ -133,7 +153,7 @@ function FuelQuoteForm({props}){
                                     name="Del_Add"
                                     readOnly={true}
                                     placeholder="Address"
-                                    value={data.Del_Add}
+                                    value={address}
                                     />
 
                             Deliver Date:
