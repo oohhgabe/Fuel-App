@@ -9,11 +9,12 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
 
+
 describe('testing',()=>{
     const onSubmit = jest.fn();
     beforeEach(() =>{
         onSubmit.mockClear();
-        render(<Router><FuelQuoteForm handleSubmit={onSubmit}/></Router>)
+        render(<FuelQuoteForm handleSubmit={onSubmit}/>)
     });
     it('onSubmit works',async()=>{
 
@@ -22,29 +23,31 @@ describe('testing',()=>{
 
         userEvent.type(screen.getByPlaceholderText("Please Enter Amount of Gallons"),'1')
         expect(screen.getByPlaceholderText("Please Enter Amount of Gallons")).toHaveDisplayValue(/1/i)
-        
-        //No matter what value we give it'll always be "9999 Some St." becuase it is readOnly which never changes
-        userEvent.type(screen.getByPlaceholderText("Address"),"1234 Some St.")
-        expect(screen.getByPlaceholderText("Address")).toHaveDisplayValue(/9999 Some St./i)
-
+                
         userEvent.type(screen.getByPlaceholderText("Please Enter a Deliver Date"),"10/24/2022")
         expect(screen.getByPlaceholderText("Please Enter a Deliver Date")).toHaveDisplayValue("10/24/2022")   
 
-        userEvent.type(screen.getByPlaceholderText("Suggested Price"),"689")
-        expect(screen.getByPlaceholderText("Suggested Price")).toHaveDisplayValue(/689/i)
+       
+        expect(screen.getByPlaceholderText("Suggested Price")).toHaveDisplayValue("")
 
-        userEvent.type(screen.getByPlaceholderText("Total Amount"),'689')
-        expect(screen.getByPlaceholderText("Total Amount")).toHaveDisplayValue(/689/i)
+        expect(screen.getByPlaceholderText("Total Amount")).toHaveDisplayValue("")
     })
-    await act(async()=>{
+    await waitFor(async() =>{
+        userEvent.click(screen.getByRole('button', {name: /get quote/i}))
+    })
+    await waitFor(async()=>{
         userEvent.click(screen.getByRole('button',{name: /submit/i}))
+    })
+    await waitFor(() =>{
+
+        expect(screen.quoteState).toBeTruthy()
     })
     
     })
 })
 
 describe("FuelQuoteHistory Works",()=>{
-    beforeEach(() => jest.clearAllMocks());
+    beforeEach(() => {jest.clearAllMocks()});
     it("History works",async()=>{
       render(<Router><FuelQuoteHistory/></Router>)
       expect(screen.getByText(/delivery date/i)).toBeInTheDocument()
@@ -52,7 +55,7 @@ describe("FuelQuoteHistory Works",()=>{
       expect(screen.getByText(/gallons requested/i)).toBeInTheDocument()
       expect(screen.getByText(/suggested price/i)).toBeInTheDocument()
       expect(screen.getByText(/total amount/i)).toBeInTheDocument()
-      
+
     })
 })
 

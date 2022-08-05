@@ -1,33 +1,26 @@
 import React, {useEffect, useState} from "react";
 import styles from './FuelQuote.module.css';
-import { useNavigate } from "react-router-dom"
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 
 
 
 function FuelQuoteForm({props}){
-    let navigate = useNavigate();
-    const [Loading,setLoading] = useState(false)
     const [quoteState, setQuoteState] = useState(false);
     const [backendDetails, setBackendDetails] = useState({
         id: 0,
         username: "",
         password: "",
     })
-    const [address,setAddress] = useState({
-        add: ""
-    })
+    const [address,setAddress] = useState({})
 
     useEffect(() => {
-        setLoading(false)
         fetch('http://localhost:5000/login_info')
         .then(res => {
             return res.json();
         })
         .then( data => {
             setBackendDetails(data.currentlyLoggedIn.at(0))
-            setLoading(true)
         })
     },[]);
 
@@ -44,15 +37,13 @@ function FuelQuoteForm({props}){
             return res.json();
         })
         .then( data => {
-            setAddress(data.result.address1)
+            setAddress(data)
         })
-    })
-
+    },[backendDetails]);
     const [selectedDate,setSelectedDated] = useState(null);
-        
     const [data,setData] = useState({
         Gal_Req: 0,
-        Del_Add: "9999 Some St.",
+        Del_Add: address,
         Del_Dat: "",
         Sug_Pri: 689,
         Tot_Amo: 0,
@@ -76,41 +67,39 @@ function FuelQuoteForm({props}){
             };
             const response = await fetch("http://localhost:5000/pricing_module", options);
             const quote = await response.json();
-            console.log(quote.price);
-            console.log(quote.total);
+            //console.log(quote.price);
+            //console.log(quote.total);
             setData({
                 Gal_Req: data.Gal_Req,
-                Del_Add: data.Del_Add,
+                Del_Add: address,
                 Del_Dat: selectedDate,
                 Sug_Pri: quote.price,
                 Tot_Amo: quote.total,
                 Users_Id: backendDetails.id,
                 username: backendDetails.username
             })
-            setQuoteState(true);
+            setQuoteState(true)
         }
     }
     const newHandle = () =>{
         setData({
             Gal_Req: data.Gal_Req,
-            Del_Add: data.Del_Add,
+            Del_Add: address,
             Del_Dat: selectedDate,
             Sug_Pri: data.Sug_Pri,
             Tot_Amo: data.Gal_Req * data.Sug_Pri,
             Users_Id: backendDetails.id,
             username: backendDetails.username
         });
-        //console.log("first")
         
     }
     //submits data to the backend
     const handleSubmit = async (event) => {
         setData(props);
         event.preventDefault();
-        //console.log("Second")
         setData({
             Gal_Req: data.Gal_Req,
-            Del_Add: data.Del_Add,
+            Del_Add: address,
             Del_Dat: selectedDate,
             Sug_Pri: data.Sug_Pri,
             Tot_Amo: data.Gal_Req * data.Sug_Pri,
@@ -128,7 +117,6 @@ function FuelQuoteForm({props}){
         };
         const response = await fetch("http://localhost:5000/create",options);
         const b = await response.json();
-        //console.log(b);
     }
 
     return(

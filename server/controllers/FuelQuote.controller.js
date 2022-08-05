@@ -22,7 +22,8 @@ const getInfo = (req,res) =>{
 const getAddress = (req,res) =>{
     quote.getAddress(req.body.backendDetails.username)
     .then((result) => {
-        res.json({result});
+        let temp = result.address1
+        res.json(temp);
     })
 }
 

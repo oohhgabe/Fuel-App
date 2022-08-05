@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
 import styles from './FuelQuote.module.css';
 
 
 
 function FuelQuoteHistory(){
-    let navigate = useNavigate();
-    const [Loading,setLoading] = useState(false)
+    
     const [backendDetails, setBackendDetails] = useState({
         id: 0,
         username: "",
@@ -14,14 +12,12 @@ function FuelQuoteHistory(){
     })
 
     useEffect(() => {
-        setLoading(false)
         fetch('http://localhost:5000/login_info')
         .then(res => {
             return res.json();
         })
         .then( data => {
             setBackendDetails(data.currentlyLoggedIn.at(0))
-            setLoading(true);
         })
     },[]);
 
