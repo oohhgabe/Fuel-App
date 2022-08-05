@@ -19,4 +19,11 @@ const getInfo = (req,res) =>{
     })
 }
 
-export {createInfo,getInfo};
+const getAddress = (req,res) =>{
+    quote.getAddress(req.body.backendDetails.username)
+    .then((result) => {
+        res.json({result});
+    })
+}
+
+export {createInfo,getInfo,getAddress};
