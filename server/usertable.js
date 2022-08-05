@@ -4,7 +4,12 @@ class usertable extends fueldb {
   constructor() {
     // Calls parent constructor first
     super();
-    const sql = `CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT, username text not null, password text not null, UNIQUE(username))`
+    const sql = `CREATE TABLE IF NOT EXISTS users(
+        id INTEGER PRIMARY KEY AUTOINCREMENT, 
+        username VARCHAR(25) not null, 
+        password VARCHAR(50) not null, 
+        UNIQUE(username)
+        )`
     this.run(sql)
   }
 

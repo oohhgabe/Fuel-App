@@ -69,6 +69,7 @@ function LoginForm({props}) {
                                 type="text"
                                 name="username"
                                 value={setDetails.username}
+                                maxLength="25"
                                 required
                                 placeholder={"Username"}
                                 onChange={handleChange}
@@ -80,6 +81,7 @@ function LoginForm({props}) {
                                 type="password"
                                 name="password"
                                 value={setDetails.password}
+                                maxLength="50"
                                 required
                                 placeholder={"Password"}
                                 onChange={handleChange}

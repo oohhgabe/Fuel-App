@@ -5,7 +5,12 @@ const users = new usertable();
 let currentlyLoggedIn = [];
 
 const loginInfo = (req, res) => {
+
     if (req.body.details.username != '' && req.body.details.password != '') {
+
+        if(req.body.details.username.length > 25 || req.body.details.password.length > 50)
+            res.send({message: "username or password exceeds maximum length."});
+
         users.getByUsername(req.body.details.username)
             .then((result) => {
                 if (result == undefined)

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/login.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/login.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/register.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/register.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/usertable.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/usertable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +150,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/COSC4353$Test_the_root_path.info" NAME="Test the root path Coverage Results" MODIFIED="1659710760953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$Register_Testing.info" NAME="Register Testing Coverage Results" MODIFIED="1659222653185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$testing.info" NAME="testing Coverage Results" MODIFIED="1659219446217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$Login_Testing.info" NAME="Login Testing Coverage Results" MODIFIED="1659236119267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
