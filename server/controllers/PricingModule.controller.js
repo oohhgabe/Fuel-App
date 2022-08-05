@@ -4,10 +4,10 @@ const profile = new pmtable();
 const fuelQuote = new fuelQuoteTable();
 let quote = [];
 
-const PricingModule = (req, res) => {
+const PricingModule = async (req, res) => {
     if (req.body.data.username !== '' && req.body.data.Gal_Req !== '') {
-        let locationFactor = 0.02;
-        let rateHistory = 0.01;
+        let locationFactor = null;
+        let rateHistory = null;
         let galReqFactor = null;
         let companyProfitFactor = 0.1;
         let margin = 0;
@@ -19,7 +19,7 @@ const PricingModule = (req, res) => {
         else
             galReqFactor = 0.03;
 
-            profile.getState(req.body.data.username)
+            const getState = await profile.getState(req.body.data.username)
             .then((result) => {
                 console.log("1:" + result)
                 if (result['state'] === undefined){
@@ -35,9 +35,10 @@ const PricingModule = (req, res) => {
                     console.log("Another State")
                     locationFactor = 0.04;
                 }
+                return locationFactor;
             });
             
-        fuelQuote.getUserHistory(req.body.data.Users_Id)
+        const getHistory = await fuelQuote.getUserHistory(req.body.data.Users_Id)
             .then((result) => {
                 console.log("3: " + result['COUNT(*)'])
                 if (result['COUNT(*)'] === undefined){
@@ -54,6 +55,7 @@ const PricingModule = (req, res) => {
                 else{
                     console.log("Did not work")
                 }
+                return rateHistory;
             },[galReqFactor])
 
         margin = 1.50 * (locationFactor - rateHistory + galReqFactor + companyProfitFactor);
@@ -61,7 +63,7 @@ const PricingModule = (req, res) => {
         totalAmount = req.body.data.Gal_Req * suggestedPrice;
         quote = {
             price: suggestedPrice.toString(),
-            total: totalAmount.toString()
+            total: totalAmount.toString(),
         };
 
         res.send(quote);
