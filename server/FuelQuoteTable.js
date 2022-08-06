@@ -25,6 +25,7 @@ class FuelQuoteTable extends fueldb {
     }
 
     createQuote(Gal_Req,Del_Add,Del_Dat,Sug_Pri,Tot_Amo,Users_Id){
+        console.log(Del_Dat)
         return this.run(
             `INSERT INTO FuelQuote (Gallons_Requested, Delivery_Address, Deliver_Date, Suggested_Price, Total_Amount, Users_Id) VALUES (?,?,?,?,?,?)`,
             [Gal_Req,Del_Add,Del_Dat,Sug_Pri,Tot_Amo,Users_Id]
@@ -33,7 +34,7 @@ class FuelQuoteTable extends fueldb {
 
     getUserQuote(Users_Id){
         return this.all(
-            `SELECT * FROM FuelQuote WHERE Users_Id=?`,
+            `SELECT * FROM FuelQuote WHERE Users_Id=? ORDER BY Deliver_Date`,
             [Users_Id]
         );
     }

@@ -30,10 +30,16 @@
     flex-direction: column;
 }
 
-.DateTextBox{
+.DateText *{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.DateTextBox {
     display: flex;
-    flex-direction: column;
     margin-left: auto;
+    flex-direction: column;
+    background-color: white;
 }
 
 .Submit input[type=submit]{
