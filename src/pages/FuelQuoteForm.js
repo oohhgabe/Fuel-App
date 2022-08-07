@@ -209,7 +209,7 @@ function FuelQuoteForm({props}){
                                 />
                             )}
                                 <input type="button" onClick={getQuote} name="Get Quote" className={styles.FuelQuoteForm_inputSubmit} value="Get Quote"/>
-                                <input type="submit" name="Submission" className={styles.FuelQuoteForm_inputSubmit} value="Submit"/>
+                                <input type="submit" disabled={!quoteState ? true : false} name="Submission" className={styles.FuelQuoteForm_inputSubmit} value="Submit"/>
                         </div>
                     </form>
                 </div>

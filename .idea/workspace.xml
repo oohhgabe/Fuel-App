@@ -3,39 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/color-support" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/color-support" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-gyp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-gyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/lib/tracker-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/lib/tracker-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/lib/binding/napi-v6-win32-unknown-x64/node_sqlite3.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/PricingModule.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/PricingModule.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/coverage/lcov-report/MockPricingModule.controller.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/coverage/lcov-report/MockPricingModule.controller.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FuelQuoteForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FuelQuoteForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +126,8 @@
       <workItem from="1658678614470" duration="5276000" />
       <workItem from="1659156386950" duration="13054000" />
       <workItem from="1659541574531" duration="20458000" />
-      <workItem from="1659826633709" duration="10352000" />
+      <workItem from="1659826633709" duration="11512000" />
+      <workItem from="1659900061319" duration="339000" />
     </task>
     <servers />
   </component>
