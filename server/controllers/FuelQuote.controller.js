@@ -20,8 +20,6 @@ const getInfo = (req,res) =>{
 }
 
 const getAddress = async (req,res) =>{
-    console.log(req.body.backendDetails.username);
-    console.log(req.app.locals.client.username);
     await quote.getAddress(req.app.locals.client.username)
     .then((result) => {
         let temp = result.address1

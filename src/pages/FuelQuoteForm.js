@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react";
 import styles from './FuelQuote.module.css';
-import DatePicker from "react-datepicker";
-import 'react-datepicker/dist/react-datepicker.css';
-
+import DateTimePicker from 'react-datetime-picker';
+import { useNavigate } from "react-router-dom";
 
 
 function FuelQuoteForm({props}){
+    let navigate = useNavigate();
+
     const [quoteState, setQuoteState] = useState(false);
     const [backendDetails, setBackendDetails] = useState({
         id: 0,
@@ -97,15 +98,18 @@ function FuelQuoteForm({props}){
     const handleSubmit = async (event) => {
         setData(props);
         event.preventDefault();
+        let string = data.Del_Dat.toString();
+        const a = string.slice(0,21);
+        console.log(a)
         setData({
             Gal_Req: data.Gal_Req,
             Del_Add: address,
-            Del_Dat: selectedDate,
+            Del_Dat: a,
             Sug_Pri: data.Sug_Pri,
             Tot_Amo: data.Gal_Req * data.Sug_Pri,
             Users_Id: backendDetails.id
         });
-
+        console.log(data)
         const value = {data};
 
         const options = {
@@ -145,18 +149,27 @@ function FuelQuoteForm({props}){
                                     />
 
                             Deliver Date:
-                            <div className={styles.DateTextBox}>
-                                <DatePicker
-                                    popperPlacement="bottom"
-                                    selected={selectedDate}
-                                    onChange={(date) => setSelectedDated(date)}
-                                    dateFormat="dd/MM/yyyy"
-                                    placeholderText={"Please Enter a Deliver Date"}
-                                    minDate={new Date()}
-                                    required
-                                    />
-                            </div>
+                            <div className={styles.DateTextBox}> 
+                                <div className={styles.DateText}>
 
+                            <DateTimePicker 
+                                onChange={setSelectedDated}
+                                autoFocus={true}
+                                format="y-MM-dd h:mm a"
+                                value={selectedDate}
+                                
+                                disableClock={true}
+                                minDate={new Date()}
+                                hourPlaceholder="hh"
+                                minutePlaceholder="mm"
+                                dayPlaceholder="dd"
+                                monthPlaceholder="mm"
+                                yearPlaceholder="yyyy"
+                                required    
+                                />
+                                </div>
+                            </div>
+                            
                             Suggested Price/Gallon:
                             {!quoteState ? (
                                 <input type="text"

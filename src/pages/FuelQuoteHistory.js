@@ -1,7 +1,20 @@
 import React, {useEffect, useState} from "react";
 import styles from './FuelQuote.module.css';
 
-
+function dateTimeParser (string){
+    const a = string.slice(0,10) + " "
+    let c = string.slice(11,13)
+    c =  + c //converts string to integer
+    if((c - 12) < 0){
+        c = c.toString();
+        c += string.slice(13,16) + "AM"
+    }else{
+        c -= 12;
+        c = c.toString();
+        c += string.slice(13,16) + "PM"
+    }
+    return a + c
+}
 
 function FuelQuoteHistory(){
     
@@ -46,6 +59,7 @@ function FuelQuoteHistory(){
         <div className="FuelQuoteHistory">
             <div className={styles.table_box}>
                 <table className={styles.table}>
+                    {console.log(backendData)}
                 <tr>
                     <th className={styles.th}>Delivery Date</th>
                     <th className={styles.th}>Delivery Address</th>
@@ -56,7 +70,7 @@ function FuelQuoteHistory(){
             {backendData.map((val,key) =>{
                     return(
                         <tr key={val.key}>
-                            <th className={styles.th}>{val.Deliver_Date}</th>
+                            <th className={styles.th}>{dateTimeParser(val.Deliver_Date)}</th>
                             <th className={styles.th}>{val.Delivery_Address}</th>
                             <th className={styles.th}>{val.Gallons_Requested}</th>
                             <th className={styles.th}>{val.Suggested_Price}</th>
