@@ -5,7 +5,7 @@ const fuelQuote = new fuelQuoteTable();
 let quote = [];
 
 const PricingModule = async (req, res) => {
-    if (req.body.data.username !== '' && req.body.data.Gal_Req !== '') {
+    if (req.body.data.username !== '' && req.body.data.Gal_Req !== 0) {
         let locationFactor = null;
         let rateHistory = null;
         let galReqFactor = null;
@@ -69,10 +69,12 @@ const PricingModule = async (req, res) => {
         };
 
         res.send(quote);
-    }
+    } else
+        res.send({message: "Cannot Calculate Quote."});
 }
 
 const getQuote = (req, res) => {
     res.json({quote})
 }
+
 export { PricingModule, getQuote }

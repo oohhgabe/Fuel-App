@@ -4,7 +4,38 @@
     <list default="true" id="4029855b-030b-4d2e-ac93-4e2d27477079" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/PricingModule.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/fuel.db" beforeDir="false" afterPath="$PROJECT_DIR$/server/fuel.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/color-support" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/color-support" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-gyp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-gyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/nopt.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@npmcli/fs/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/nopt.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/lib/tracker-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/lib/tracker-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-gyp/node_modules/are-we-there-yet/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/lib/binding/napi-v6-win32-unknown-x64/node_sqlite3.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sqlite3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/PricingModule.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/PricingModule.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +155,7 @@
       <workItem from="1658678614470" duration="5276000" />
       <workItem from="1659156386950" duration="13054000" />
       <workItem from="1659541574531" duration="20458000" />
+      <workItem from="1659826633709" duration="10352000" />
     </task>
     <servers />
   </component>
@@ -146,10 +178,10 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/COSC4353$Register_Testing.info" NAME="Register Testing Coverage Results" MODIFIED="1659222653185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/COSC4353$testing.info" NAME="testing Coverage Results" MODIFIED="1659219446217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$Register_Testing.info" NAME="Register Testing Coverage Results" MODIFIED="1659716874036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$Login_Testing.info" NAME="Login Testing Coverage Results" MODIFIED="1659236119267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$Rerun_Failed_Tests.info" NAME="Rerun Failed Tests Coverage Results" MODIFIED="1659236216935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COSC4353$testing.info" NAME="testing Coverage Results" MODIFIED="1659744281854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$Check_if_Navbar_has_links.info" NAME="Check if Navbar has links Coverage Results" MODIFIED="1659234781409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COSC4353$should_return_Hello_World_response.dat" NAME="should return Hello World response Coverage Results" MODIFIED="1658631650745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
