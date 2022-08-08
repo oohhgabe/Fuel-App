@@ -1,24 +1,31 @@
 import React, {useEffect, useState} from "react";
 import styles from './FuelQuote.module.css';
 
-function dateTimeParser (string){
-    const a = string.slice(0,10) + " "
-    let c = string.slice(11,13)
-    c =  + c //converts string to integer
-    if((c - 12) < 0){
-        c = c.toString();
-        c += string.slice(13,16) + "AM"
-    }else{
-        c -= 12;
-        c = c.toString();
-        c += string.slice(13,16) + "PM"
-    }
-    return a + c
-}
+
 
 function FuelQuoteHistory(){
+
+    const dateTimeParser = (string)=>{
+        const a = string.slice(0,10) + " "
+        let c = string.slice(11,13)
+        c =  + c //converts string to integer
+        if((c - 12) < 0){
+            c += 7;
+            c = c.toString();
+            c += string.slice(13,16) + "AM"
+        }else if(c - 17 === 0){
+            c = "12"
+            c += string.slice(13,16) + "PM"   
+        }else{
+            c -= 17;
+            c = c.toString();
+            c += string.slice(13,16) + "PM"
+    }
+    console.log("dateTimeParser has finished")
+    return a + c
+    }
     
-    const [backendDetails, setBackendDetails] = useState({
+    const [backendDetails, setBackendDetails] = React.useState({
         id: 0,
         username: "",
         password: ""
@@ -34,7 +41,7 @@ function FuelQuoteHistory(){
         })
     },[]);
 
-    const [backendData, setBackendData] = useState([])
+    const [backendData, setBackendData] = React.useState([])
     const value = {backendDetails}
     
     useEffect(() => {

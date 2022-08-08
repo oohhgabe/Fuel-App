@@ -1,11 +1,10 @@
+
 import React, {useEffect, useState} from "react";
 import styles from './FuelQuote.module.css';
 import DateTimePicker from 'react-datetime-picker';
-import { useNavigate } from "react-router-dom";
-
 
 function FuelQuoteForm({props}){
-    let navigate = useNavigate();
+    //let navigate = useNavigate();
 
     const [quoteState, setQuoteState] = useState(false);
     const [backendDetails, setBackendDetails] = useState({
@@ -98,18 +97,15 @@ function FuelQuoteForm({props}){
     const handleSubmit = async (event) => {
         setData(props);
         event.preventDefault();
-        let string = data.Del_Dat.toString();
-        const a = string.slice(0,21);
-        console.log(a)
+        
         setData({
             Gal_Req: data.Gal_Req,
             Del_Add: address,
-            Del_Dat: a,
+            Del_Dat: data.Del_Dat,
             Sug_Pri: data.Sug_Pri,
             Tot_Amo: data.Gal_Req * data.Sug_Pri,
             Users_Id: backendDetails.id
         });
-        console.log(data)
         const value = {data};
 
         const options = {
@@ -121,6 +117,9 @@ function FuelQuoteForm({props}){
         };
         const response = await fetch("http://localhost:5000/create",options);
         const b = await response.json();
+        
+            
+        
     }
 
     return(
@@ -129,6 +128,7 @@ function FuelQuoteForm({props}){
                 <div className={styles.FuelQuoteForm_container}>
                     <form onClick={newHandle} onSubmit={handleSubmit}>
                         <div data-testid="test_2" className={styles.FuelQuoteForm_p}>
+                            {console.log(quoteState)}
                             Gallons Requested:
                                 <input type="text"
                                     className={styles.FuelQuoteForm_inputText}
@@ -157,7 +157,7 @@ function FuelQuoteForm({props}){
                                 autoFocus={true}
                                 format="y-MM-dd h:mm a"
                                 value={selectedDate}
-                                
+                                placeholder="Date"
                                 disableClock={true}
                                 minDate={new Date()}
                                 hourPlaceholder="hh"
